@@ -7,7 +7,7 @@ var prefix = "-"
 //bc
 
 client.on("message", message => {
-    if (message.content.startsWith("m!obc")) {
+    if (message.content.startsWith("-obc")) {
                  if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' ');
@@ -23,7 +23,7 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "m!";
+  var prefix = "-";
 
   client.on("message", message => {
   
@@ -93,19 +93,19 @@ m.sendMessage(args)
   
   
   client.on("message", message => {
-    if (message.content === "m!help") {
+    if (message.content === "-help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       m!obc | لأرسال برود كاست للكل
+       -obc | لأرسال برود كاست للكل
 
-       m!bc  |  لأرسال برود كاست للأونلاين
+       -bc  |  لأرسال برود كاست للأونلاين
 
-       m!invite | لدعوة البوت الي سيرفرك
+       -invite | لدعوة البوت الي سيرفرك
 
-       m!support | سيرفر السبورت** `)
+       -support | سيرفر السبورت** `)
    message.author.sendEmbed(embed)
    
    }
@@ -113,7 +113,7 @@ m.sendMessage(args)
 
 
    client.on("message", message => {
-    if (message.content === "m!invite") {
+    if (message.content === "-invite") {
      const embed = new Discord.RichEmbed()
          .setColor("RANDOM")
          .addField('Broadcast', `https://discordapp.com/api/oauth2/authorize?client_id=489960386339274771&permissions=8&scope=bot`)
@@ -124,10 +124,10 @@ m.sendMessage(args)
 
 
    client.on("message", message => {
-    if (message.content === "m!support") {
+    if (message.content === "-support") {
      const embed = new Discord.RichEmbed()
          .setColor("RANDOM")
-         .addField('❤سيرفر الدعم الفني', `  https://discord.gg/NuQ2zYu  `)
+         .addField('❤سيرفر الدعم الفني', `  https://discord.gg/gQ6AfzB  `)
      message.author.send({embed});
    
     }
@@ -138,7 +138,7 @@ m.sendMessage(args)
 
 
    client.on('message', message => {
-    if (message.content.startsWith("m!bot")) {
+    if (message.content.startsWith("-bot")) {
     message.channel.send({
         embed: new Discord.RichEmbed()
             .setAuthor(client.user.username,client.user.avatarURL)
@@ -160,7 +160,7 @@ m.sendMessage(args)
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("m!help | m!invite",{type: 'WATCHING'});
+          client.user.setActivity("-help | -invite",{type: 'WATCHING'});
   
   });
 
