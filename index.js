@@ -66,9 +66,9 @@ client.on('ready',  () => {
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('m!adminbc')){
+if (message.content.startsWith('-adminbc')){
 if(!message.author.id === '510365119507595265') return;
-message.channel.sendMessage(' kkkجار ارسال الرسالة |:white_check_mark:')
+message.channel.sendMessage(' k dont kill meجار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
 m.sendMessage(args)
 })
@@ -79,7 +79,7 @@ m.sendMessage(args)
 
   
   client.on('message', msg => {
-    if(msg.content === 'm!help')
+    if(msg.content === '-help')
     msg.reply('Check Your DM :white_check_mark:')
   });
   
