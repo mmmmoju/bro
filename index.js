@@ -1,6 +1,6 @@
 ﻿const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "-"
+var prefix = "#"
 
 
 
@@ -23,7 +23,8 @@ client.on("message", message => {
 //bc online
 
 
-  var prefix = "-";
+  var prefix = "#"
+  ";
 
   client.on("message", message => {
   
@@ -46,7 +47,7 @@ client.on("message", message => {
 
 client.on('message', message => {
     var  user = message.mentions.users.first() || message.author;
-if (message.content.startsWith("m!avatar")) {
+if (message.content.startsWith("#avatar")) {
 message.channel.send(`This avatar For ${user} link : ${user.avatarURL}`);
 }
 });
@@ -66,7 +67,7 @@ client.on('ready',  () => {
   client.on('message', message => {
     if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('-adminbc')){
+if (message.content.startsWith('#adminbc')){
 if(!message.author.id === '510365119507595265') return;
 message.channel.sendMessage(' k dont kill meجار ارسال الرسالة |:white_check_mark:')
 client.users.forEach(m =>{
@@ -93,19 +94,19 @@ m.sendMessage(args)
   
   
   client.on("message", message => {
-    if (message.content === "-help") {
+    if (message.content === "#help") {
      const embed = new Discord.RichEmbed() 
          .setColor("#00FF00")
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**Help|هيلب
 
-       -obc | لأرسال برود كاست للكل
+       #obc | لأرسال برود كاست للكل
 
-       -bc  |  لأرسال برود كاست للأونلاين
+       #bc  |  لأرسال برود كاست للأونلاين
 
-       -invite | لدعوة البوت الي سيرفرك
+       #invite | لدعوة البوت الي سيرفرك
 
-       -support | سيرفر السبورت** `)
+       #support | سيرفر السبورت** `)
    message.author.sendEmbed(embed)
    
    }
@@ -124,7 +125,7 @@ m.sendMessage(args)
 
 
    client.on("message", message => {
-    if (message.content === "-support") {
+    if (message.content === "#support") {
      const embed = new Discord.RichEmbed()
          .setColor("RANDOM")
          .addField('❤سيرفر الدعم الفني', `  https://discord.gg/gQ6AfzB  `)
@@ -160,7 +161,7 @@ m.sendMessage(args)
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag} !`);
-          client.user.setActivity("-help | -invite",{type: 'WATCHING'});
+          client.user.setActivity("#help | #invite",{type: 'WATCHING'});
   
   });
 
